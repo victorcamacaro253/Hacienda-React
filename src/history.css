@@ -1,0 +1,89 @@
+body {
+    background-image: url('/src/assets/images/img8.png');
+    background-size: cover; /* Adjust the image to cover the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; 
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default paddings */
+    font-family: 'Montserrat', sans-serif; /* Set the font for the document */
+    height: 100%;
+}
+
+.body {
+    margin-top: 30px;
+    width: 100%;
+    display: flex; /* Use flexbox to align elements in a row */
+    flex-wrap: wrap; /* Allow wrapping of elements */
+}
+
+.main-title {
+    color: #8f2f07;
+    font-weight: 700;
+    width: 100%; /* Make the title occupy the full width */
+    text-align: center; /* Center the title text */
+    margin-bottom: 20px; /* Add space below the title */
+    font-style: italic;
+}
+
+.history {
+    margin-left: 20px; /* Add left margin to separate the image from the text */
+    flex: 1; /* Allow the container to occupy the remaining space */
+    background-color: rgba(255, 255, 255, 0.664); /* Semi-transparent background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Semi-transparent shadow */
+    padding: 20px; /* Adjust padding as necessary */
+}
+
+.image-responsive {
+    width: 100%; /* Make images responsive */
+    max-width: 400px; /* Set a max width for images */
+    border-radius: 5px;
+    transition: transform 0.3s; /* Add a transition for hover effect */
+}
+
+.image-responsive:hover {
+    transform: scale(1.05); /* Slightly scale the image on hover */
+}
+
+h3.section-title {
+    color: #8f2f07;
+    font-weight: 700;
+    margin-top: 20px; /* Add space above section titles */
+    margin-bottom: 10px; /* Add space below section titles */
+}
+
+p {
+    color: #8f2f07;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 15px; /* Add space below paragraphs */
+}
+
+.acomodo {
+    display: flex;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.274); /* Semi-transparent border */
+    padding-bottom: 15px; /* Add padding below the border */
+    margin-bottom: 15px; /* Add margin below the acomodo section */
+}
+
+.descripcion {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .body {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .container {
+        margin-left: 0; /* Remove left margin on smaller screens */
+        width: 90%; /* Set a width for the container */
+    }
+
+    .image-responsive {
+        max-width: 100%; /* Allow images to take full width on smaller screens */
+    }
+}

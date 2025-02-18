@@ -1,0 +1,231 @@
+/* HistoryPage.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  body{
+    background-image: url('/src/assets/images/img8.png');
+    background-size: cover; /* Adjust the image to cover the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; 
+    scroll-behavior: smooth; /* Smooth scrolling */
+
+
+  }
+  
+  .history-page {
+    margin-top: -50px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #333;
+    line-height: 1.8;
+    padding: 0 20px;  /* Padding to keep content within the screen */
+
+    
+  }
+  
+  .hero-section {
+    position: relative;
+    
+    height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;  /* Centers horizontally */
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden; /* Hide parts of background image that move */
+
+    
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+    
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff6347;
+  }
+  
+  .timeline-section {
+    padding: 80px 20px;
+    background-color: transparent;
+    text-align: center;
+  }
+  
+  .timeline h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timeline-item {
+    background-color: #fff;
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    
+    width: 80%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .year {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ff7f50;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .event h3 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .event p {
+    margin-top: 15px;
+    color: #777;
+  }
+  
+  .gallery-section {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .gallery h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cta-section {
+    background-color: #ff7f50;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-overlay h1 {
+      font-size: 2.8rem;
+    }
+  
+    .timeline h2, .gallery h2 {
+      font-size: 2.2rem;
+    }
+  
+    .cta-button {
+      padding: 10px 20px;
+    }
+  }
+
+
+/* Parallax effect */
+@media (min-width: 1200px) {
+    .hero-image {
+      transform: translateY(-20%); /* Adjust to create parallax effect */
+    }
+  }
+
+  /* Add this to your CSS to trigger the animation */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

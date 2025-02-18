@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+
 body {
     margin: 0;
     background-color: #000;
@@ -12,9 +14,10 @@ a {
     text-decoration: none;
 }
 
+
 header {
     width: 100%;
-    max-width: 80%;
+    
     margin: auto;
     height: 50px;
     display: flex;
@@ -24,9 +27,34 @@ header {
 }
 
 header a {
-    color: #eee;
-    margin-right: 40px;
+ color: #eee;
+    margin-right: 80px;
+    margin-top: 40px;
 }
+
+/* Dark Header Styles (for light background) */
+
+
+
+
+
+.dark-header {
+    color: black; /* Dark text color for light background pages */
+  }
+  
+  .dark-header .navbar-nav .nav-link {
+    color: black; /* Ensure links are black for light backgrounds */
+  }
+  
+  /* Hover effect for dark background */
+  .dark-header .navbar-nav .nav-link:hover {
+    color: #333; /* Darker hover color */
+  }
+  
+  /* Optional: Style for the navbar links on dark backgrounds */
+  .navbar-light .navbar-nav .nav-link {
+    color: inherit; /* Inherit color for light navbar */
+  }
 
 .header-content {
     display: flex;
@@ -37,7 +65,8 @@ header a {
 }
 
 .logo img {
-    max-width: 100px;
+    margin: 50px 0 0 100px;
+    max-width: 150px;
 }
 
 nav {
