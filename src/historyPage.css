@@ -17,11 +17,11 @@
   }
   
   .history-page {
-    margin-top: -50px;
+    margin-top: -100px;
     font-family: 'Open Sans', Arial, sans-serif;
     color: #333;
     line-height: 1.8;
-    padding: 0 20px;  /* Padding to keep content within the screen */
+   /* padding: 0 20px;   Padding to keep content within the screen */
 
     
   }

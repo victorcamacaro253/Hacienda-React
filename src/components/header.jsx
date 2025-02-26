@@ -49,7 +49,7 @@ const Header = () => {
 export default Header;
 
 */
-
+import  { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import  useHeaderStyle from '../hooks/useHeaderStyle'; // Ensure this import is correct
 
@@ -58,9 +58,29 @@ import logo from '/src/assets/images/img5.1.png'; // Adjust the path as necessar
 const Header = () => {
   // Use the hook to determine if the background color is dark or light
   const { isDarkBackground } = useHeaderStyle();
+   // State to track if the user has scrolled
+   const [scrolled, setScrolled] = useState(false);
+
+
+  // Effect hook to listen for the scroll event
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {  // Adjust this value as per your needs
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    // Add the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className={`py-3 ${isDarkBackground ? 'dark-header' : 'text-white'}`}>
+    <header className={`py-3 ${scrolled ? 'solid-header' : 'transparent-header'} ${isDarkBackground ? 'dark-header' : 'text-white'}`}>
       <div className="container d-flex justify-content-between align-items-center">
         <div className="logo" style={{ marginTop: '30px' }}>
           <img src={logo} alt="Logo" className="img-fluid" />

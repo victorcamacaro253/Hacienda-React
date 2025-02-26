@@ -4,7 +4,7 @@ import Carousel from './components/carousel';
 //import HistoryPage from './components/history';
 import HistoryPage from './components/historyPage';
 import './style.css';
-import useHeaderStyle from './hooks/useHeaderStyle'; // Import the custom hook
+import Map from './components/maps';
 
 const App = () => {
   
@@ -17,7 +17,7 @@ const App = () => {
       {/* Define Routes for different pages */}
       <Routes>
         {/* Default route (Home page) */}
-        <Route path="/" element={<div>   <Carousel/></div>} />
+        <Route path="/" element={<div>   <Carousel/> <Map/></div>} />
 
         {/* Route for HistoryPage */}
         <Route path="/history" element={<HistoryPage />} />
