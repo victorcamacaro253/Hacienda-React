@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import Thumbnail from './thumbnail';
 import { Link } from 'react-router-dom';  // Importa el Link de React Router
+import img1 from '../assets/images/img6.webp'
+import img2 from '../assets/images/img7.webp'
+import img3 from '../assets/images/img8.png'
+import img4 from '../assets/images/img9.png'
+
 
 
 
@@ -14,21 +19,21 @@ const Carousel = () => {
     // Example dynamic data (can be fetched from an API or defined elsewhere)
     const carouselItems = [
         {
-            img: '/src/assets/images/img6.webp',
-            thumbnail: '../assets/images/img6.webp',
+            img: img1,
+            thumbnail: img1,
             author: 'LUNDEV',
             topic: 'ANIMAL',
             description: 'Principales criadores de la Ganado Raza Carora'
         },
         {
-            img: '../assets/images/img7.webp',
-            thumbnail: '/src/assets/images/img7.webp',
+            img: img2,
+            thumbnail: img2,
             author: 'LUNDEV',
             topic: 'ANIMAL',
             description: 'Principales criadores de la Ganado Raza Carora'
         },
         {
-          img: '../assets/images/img8.png',
+          img: img3,
           title: 'Una vida entera dedicada a la ganadería y agricultura',
           author: 'LUNDEV',
           topic: 'ANIMAL',
@@ -36,7 +41,7 @@ const Carousel = () => {
           path: '/history' 
         },
         {
-          img: '../assets/images/img9.png',
+          img: img4,
           title: 'Producción de Queso',
           author: 'LUNDEV',
           topic: 'ANIMAL',
