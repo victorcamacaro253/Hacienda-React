@@ -81,7 +81,7 @@
   height: 450px; /* Increased height for a larger card */
   perspective: 1000px;
   cursor: pointer;
-  border-radius: 1.5rem;
+ /* border-radius: 1.5rem; */
   border-color: none;
 }
 
@@ -139,8 +139,8 @@
   bottom: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
   opacity: 0.8;
-  border-radius: 1.5rem;
-}
+  /*border-radius: 1.5rem; */
+ }
 
 .icon-wrapper {
   position: absolute;
