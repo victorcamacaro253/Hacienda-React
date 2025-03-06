@@ -15,20 +15,20 @@ const Carousel = () => {
     const carouselItems = [
         {
             img: '/src/assets/images/img6.webp',
-            thumbnail: '/src/assets/images/img6.webp',
+            thumbnail: '../assets/images/img6.webp',
             author: 'LUNDEV',
             topic: 'ANIMAL',
             description: 'Principales criadores de la Ganado Raza Carora'
         },
         {
-            img: '/src/assets/images/img7.webp',
+            img: '../assets/images/img7.webp',
             thumbnail: '/src/assets/images/img7.webp',
             author: 'LUNDEV',
             topic: 'ANIMAL',
             description: 'Principales criadores de la Ganado Raza Carora'
         },
         {
-          img: '/src/assets/images/img8.png',
+          img: '../assets/images/img8.png',
           title: 'Una vida entera dedicada a la ganadería y agricultura',
           author: 'LUNDEV',
           topic: 'ANIMAL',
@@ -36,7 +36,7 @@ const Carousel = () => {
           path: '/history' 
         },
         {
-          img: '/src/assets/images/img9.png',
+          img: '../assets/images/img9.png',
           title: 'Producción de Queso',
           author: 'LUNDEV',
           topic: 'ANIMAL',
