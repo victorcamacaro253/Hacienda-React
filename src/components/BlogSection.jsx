@@ -2,14 +2,14 @@
 import img1 from '/src/assets/images/fiesta-cosecha.jpg';
 import img2 from '/src/assets/images/ganaderia-sostenible.jpg';
 import img3 from '/src/assets/images/DIA-LACTEA.jpg';
-
 import '../blogSection.css'; // Import the CSS file for styling
-const BlogSection = () => {
+
+const BlogSection = () => { 
     return (
         <section className="blog-section">
             <div className="container">
-                <h2 className="section-title">Últimas Noticias</h2>
-                <p className="section-description">Mantente al día con todo lo que sucede en Hacienda Villa Blanca. Conoce nuestros eventos, nuevos productos y más.</p>
+                <h2 className="section-title-blog">Últimas Noticias</h2>
+                <p className="section-description-blog">Mantente al día con todo lo que sucede en Hacienda Villa Blanca. Conoce nuestros eventos, nuevos productos y más.</p>
 
                 <div className="blog-posts">
                     {/* Post 1 */}
