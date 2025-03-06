@@ -3,7 +3,7 @@ import img1 from '/src/assets/images/fiesta-cosecha.jpg';
 import img2 from '/src/assets/images/ganaderia-sostenible.jpg';
 import img3 from '/src/assets/images/DIA-LACTEA.jpg';
 
-import '../BlogSection.css'; // Import the CSS file for styling
+import '../blogSection.css'; // Import the CSS file for styling
 const BlogSection = () => {
     return (
         <section className="blog-section">
