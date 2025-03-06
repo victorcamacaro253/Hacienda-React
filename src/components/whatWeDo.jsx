@@ -1,6 +1,6 @@
 // WhatWeDo.jsx
 import { Wheat, Cog as Cow, Leaf, Mountain } from 'lucide-react';
-import '../WhatWeDo.css';
+import '../whatWeDo.css';
 
 const WhatWeDo = () => {
   const activities = [
