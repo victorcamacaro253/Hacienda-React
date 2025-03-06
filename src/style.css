@@ -174,7 +174,7 @@ nav a:hover {
 
 .carousel .list .item .title,
 .carousel .list .item .topic {
-    font-size: 5em;
+    font-size: 4em;
     font-weight: bold;
     line-height: 1.3em;
 }
@@ -192,12 +192,43 @@ nav a:hover {
 }
 
 .carousel .list .item .buttons button {
-    border: none;
-    background-color: #eee;
-    letter-spacing: 1px;
-    font-family: Poppins;
-    font-weight: 500;
+ background-color: #f1683a; /* Color verde */
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado */
+  font-size: 16px; /* Tamaño de texto */
+  border: 2px solid #eee;; /* Borde verde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
 }
+
+
+/* Hover para ambos botones */
+.carousel .list .item .buttons button:hover {
+    background-color: white; /* Fondo blanco en hover */
+    color: #f1683a; /* Texto verde en hover */
+    border: 2px solid #f1683a; /* Borde verde en hover */
+    transform: translateY(-3px); /* Efecto de levantamiento */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  }
+
+  /* Efecto de foco para accesibilidad */
+.carousel .list .item .buttons button:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 3px rgba(76, 175, 80, 0.5); /* Resaltado verde */
+  }
+  
+  .carousel  .list .item .buttons button:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 3px rgba(76, 175, 80, 0.5); /* Resaltado verde */
+  }
+  
+  /* Estilo específico para el botón "SUBSCRIBE" */
+  .carousel .buttons button:nth-child(2) {
+    background-color: #FF5722; /* Color diferente para el botón de "Subscribe" */
+    border-color: #FF5722;
+  }
 
 .carousel .list .item .buttons button:nth-child(2) {
     background-color: transparent;

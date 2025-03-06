@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Thumbnail from './thumbnail';
+import { Link } from 'react-router-dom';  // Importa el Link de React Router
+
 
 
 const Carousel = () => {
@@ -31,6 +33,7 @@ const Carousel = () => {
           author: 'LUNDEV',
           topic: 'ANIMAL',
           description: 'Conoce nuestra Historia',
+          path: '/history' 
         },
         {
           img: '/src/assets/images/img9.png',
@@ -90,7 +93,13 @@ const Carousel = () => {
                             <div className="topic">{item.topic}</div>
                             <div className="des">{item.description}</div>
                             <div className="buttons">
-                                <button>VER MAS</button>
+                            {item.path ? (
+                                    <Link to={item.path}>
+                                        <button>VER MAS</button>
+                                    </Link>
+                                ) : (
+                                    <button>VER MAS</button>
+                                )}
                                 <button>SUBSCRIBE</button>
                             </div>
                         </div>
