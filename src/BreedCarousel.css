@@ -1,0 +1,48 @@
+.breed-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 250px; /* Adjust as per your design */
+    border-radius: 1rem;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%;
+    height: 100%;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  .carousel-button:hover {
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  
