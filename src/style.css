@@ -43,7 +43,8 @@ header a {
   }
   
   .solid-header {
-    background-color: rgba(0, 0, 0, 0.8); /* You can adjust the color as needed */
+   /* background-color: rgba(0, 0, 0, 0.8); /* You can adjust the color as needed */
+   background-color: #fc764df1;
     transition: background-color 0.3s ease-in-out;
   }
   
