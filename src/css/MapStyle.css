@@ -1,0 +1,78 @@
+/* MapStyles.css */
+
+/* Style for the bottom right control */
+.leaflet-bottom.leaflet-right {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding around the content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    z-index: 1000; /* Ensure it appears above other elements */
+    width: 40%;
+  }
+  
+  /* Optional: Style for the routing container */
+  .leaflet-routing-container {
+    width: 100%; /* Limit the width of the routing control */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  /* Style for the toggle button */
+  .toggle-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px 10px; /* Padding */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .toggle-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+
+  /* RoutingStyles.css */
+
+/* Style for the routing alternatives container */
+.leaflet-routing-alternatives-container {
+  /*  max-height: 300px; /* Set a maximum height */
+      height: 74vh;
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding around the content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  }
+  /* MapStyle.css */
+
+/* Style for the geocoder control */
+.leaflet-control-geocoder {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    padding: 5px; /* Padding around the control */
+  }
+  
+  /* Style for the search input */
+  .leaflet-control-geocoder input {
+    width: 200px; /* Set a fixed width */
+    padding: 5px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    outline: none; /* Remove outline */
+  }
+  
+  /* Style for the search button */
+  .leaflet-control-geocoder button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px 10px; /* Padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 5px; /* Space between input and button */
+  }
+  
+  /* Button hover effect */
+  .leaflet-control-geocoder button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
