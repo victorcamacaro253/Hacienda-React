@@ -67,8 +67,9 @@ const ImageCarousel = () => {
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="carousel-slide">
-              <img src={image.url} alt={image.title} />
+<div key={index} className="carousel-slide" >
+
+              <img src={image.url} alt={image.title} style={{ height: '100%' }}/>
               <div className="slide-content">
                 <h2>{image.title}</h2>
                 <p>{image.description}</p>

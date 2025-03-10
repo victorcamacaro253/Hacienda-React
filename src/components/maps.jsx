@@ -1,9 +1,10 @@
-import { useEffect } from 'react'; // Ensure React is imported
+import { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 import "leaflet/dist/leaflet.css";
 import L from 'leaflet';
 import 'leaflet-routing-machine';
 import 'leaflet-control-geocoder';
+import '../css/MapStyle.css'
 
 const MapWithShops = () => {
   const shopLocations = [
@@ -12,31 +13,27 @@ const MapWithShops = () => {
     { id: 3, name: "Farmatodo", position: [10.169680018772281, -70.07715225219728], imageUrl: 'https://picsum.photos/seed/picsum/200/300' }
   ];
 
-  // Coordinates for Barquisimeto and Caracas
   const startPoint = [10.0634, -69.3122];  // Barquisimeto
   const endPoint = [10.4806, -66.9036];  // Caracas
 
-  // Geocoding (Search) functionality
   const MapWithSearch = () => {
     const map = useMap();
 
     useEffect(() => {
-      // Initialize the geocoder control and add it to the map
       const geocoder = L.Control.Geocoder.nominatim();
       const geocoderControl = L.Control.geocoder({
         geocoder,
-        position: 'topleft',  // Position the search bar in the top-left corner
+        position: 'topleft',
       }).addTo(map);
       
       return () => {
-        map.removeControl(geocoderControl);  // Cleanup when the map is unmounted
+        map.removeControl(geocoderControl);
       };
     }, [map]);
 
     return null;
   };
 
-  // Map component for Leaflet Routing Machine
   const MapEventsHandler = () => {
     const map = useMap();
 
@@ -49,14 +46,38 @@ const MapWithShops = () => {
 
     useEffect(() => {
       if (map) {
-        // Initialize the routing machine
-        L.Routing.control({
+        
+        const routingControl = L.Routing.control({
+          lineOptions: {
+            styles: [{ color: '#6FA1EC', opacity: 0.7, weight: 5 }] // Adjust the route line style
+          },
           waypoints: [
             L.latLng(startPoint),
             L.latLng(endPoint),
           ],
           routeWhileDragging: true,
+          position: 'bottomright', // Change position to bottom right
+          collapsible: true, // Make the control collapsible
+          autoRoute: true, // Automatically route
+          show: false, // Initially hide the control
         }).addTo(map);
+
+        // Optional: Add a button to toggle the routing control
+        const toggleButton = L.control({ position: 'topright' });
+        toggleButton.onAdd = function () {
+          const div = L.DomUtil.create('div', 'toggle-button');
+          div.innerHTML = '<button>Toggle Route</button>';
+          div.onclick = function () {
+            routingControl.toggle(); // Toggle the routing control
+          };
+          return div;
+        };
+        toggleButton.addTo(map);
+
+        return () => {
+          map.removeControl(routingControl);
+          map.removeControl(toggleButton);
+        };
       }
     }, [map]);
 
@@ -64,12 +85,15 @@ const MapWithShops = () => {
   };
 
   return (
-    <MapContainer center={startPoint} zoom={13} style={{ height: "100vh", width: "100%" }}>
+<div style={{ height: "100vh", width: "100%", background: 'linear-gradient(135deg, #f9f9f9 0%, #e8f5e9 100%)', display: "flex", flexDirection: "column", alignItems: "center"}}>
+
+         <h1 style={{ color: "white", marginBottom: "20px" }}>Mapa</h1>
+   <MapContainer center={startPoint} zoom={13} style={{ height: "80vh", width: "80%",borderRadius:"10px" }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-
+    
       {shopLocations.map(shop => (
         <Marker key={shop.id} position={shop.position}>
           <Popup>
@@ -80,13 +104,12 @@ const MapWithShops = () => {
           </Popup>
         </Marker>
       ))}
-
-      {/* Add the MapWithSearch component to enable geocoding */}
+    
       <MapWithSearch />
-
-      {/* Handle the route using the MapEventsHandler */}
       <MapEventsHandler />
     </MapContainer>
+    </div>
+ 
   );
 };
 

@@ -45,7 +45,8 @@ const WhatWeDo = () => {
 
         <div className="grid">
           {activities.map((activity, index) => (
-            <div key={index} className="card" tabIndex={0}>
+<div key={index} className="card" tabIndex={0} style={{ border: 'none' }}>
+
               <div className="card-inner">
                 <div className="card-front">
                   <img src={activity.image} alt={activity.title} />
