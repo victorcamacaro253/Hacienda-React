@@ -81,7 +81,7 @@ const Header = () => {
 
   return (
     <header className={`py-3 ${scrolled ? 'solid-header' : 'transparent-header'} ${isDarkBackground ? 'dark-header' : 'text-white'}`}>
-      <div className="container d-flex justify-content-between align-items-center">
+     
         <div className="logo" style={{ marginTop: '30px' }}>
           <img src={logo} alt="Logo" className="img-fluid" />
         </div>
@@ -113,13 +113,13 @@ const Header = () => {
                   <Link to="/history" className={`nav-link ${isDarkBackground ? 'text-black' : 'text-white'}`}>Nuestra Historia</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/intranet" className={`nav-link ${isDarkBackground ? 'text-black' : 'text-white'}`}>Intranet</Link>
+                  <Link to="/intranet" className={`nav-link ${isDarkBackground ? 'text-black' : 'text-white'}`}   style={{ paddingLeft: '35px' }}>Intranet</Link>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
-      </div>
+      
     </header>
   );
 };

@@ -63,6 +63,7 @@
   gap: 2.5rem;
   perspective: 1000px;
   height: 50vh;
+  width: 100%;
 }
 
 @media (min-width: 500px) {
@@ -78,17 +79,19 @@
 }
 
 @media (min-width: 1024px) {
-  .grid {
+  .grid.w {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.card {
-  height: 450px; /* Increased height for a larger card */
+.card.w {
+  height: 100%; /* Increased height for a larger card */
   perspective: 1000px;
   cursor: pointer;
+  width: 100%;
  /* border-radius: 1.5rem; */
   border-color: none;
+  margin: 10px;
 }
 
 .card:focus {
@@ -158,6 +161,7 @@
   padding: 1.5rem;
   border-radius: 50%;
   transition: transform 0.3s ease;
+  width: 30%;
 }
 
 .card:hover .icon-wrapper {

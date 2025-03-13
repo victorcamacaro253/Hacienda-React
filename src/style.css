@@ -2,6 +2,7 @@
 
 
 
+
 body {
     margin: 0;
     background-color: #000;
@@ -53,9 +54,9 @@ header a {
     color: white;
   }
   
-  .solid-header .logo img {
+ /* .solid-header .logo img {
     filter: brightness(0) invert(1); /* If your logo has dark colors and you want it visible on a dark background */
-  }
+  
   
   .transparent-header .navbar-nav .nav-link {
     color: white;
@@ -98,7 +99,7 @@ header a {
 }
 
 .logo img {
-    margin: 5px 0 0 100px;
+    margin: 5px 0 0 180px;
     max-width: 150px;
 }
 
@@ -481,11 +482,26 @@ nav a:hover {
     }
 }
 
+
+
+@media screen and (max-width: 700px) {
+    .logo img {
+        margin: 5px 0 0 100px;
+        max-width: 150px;
+    }
+}
+
+
+
 @media screen and (max-width: 678px) {
     header {
         width: 100%;
     }
 
+    .logo img {
+        margin: 5px 0 0 100px;
+        max-width: 150px;
+    }
     .carousel .list .item .content {
         padding-right: 0;
     }
@@ -494,3 +510,4 @@ nav a:hover {
         font-size: 30px;
     }
 }
+

@@ -106,6 +106,8 @@
     display: flex;
     gap: 0.5rem;
     z-index: 10;
+    justify-content: center; /* Ensures the dots themselves are centered in the container */
+    width: 100%; /* Ensures it stretches across the full width of the container */
   }
   
   .carousel-dot {

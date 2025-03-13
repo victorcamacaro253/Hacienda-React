@@ -10,6 +10,7 @@ import WhatWeDo from './components/whatWeDo';
 import TestimonialsSection from './components/Testimonials';
 import ImageCarousel from './components/ImageCarousel';
 import BreedsShowcase from './components/breedshowcase';
+import BreedsDetails from './breedDetails';
 
 const App = () => {
   
@@ -26,6 +27,10 @@ const App = () => {
 
         {/* Route for HistoryPage */}
         <Route path="/history" element={<HistoryPage />} />
+
+       <Route path='/breeds' element={<BreedsDetails/>} />
+
+
       </Routes>
     </Router>
   );

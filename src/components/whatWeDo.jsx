@@ -43,15 +43,15 @@ const WhatWeDo = () => {
           </p>
         </div>
 
-        <div className="grid">
+        <div className="grid w">
           {activities.map((activity, index) => (
-<div key={index} className="card" tabIndex={0} style={{ border: 'none' }}>
+<div key={index} className="card w" tabIndex={0} style={{ border: 'none' }}>
 
               <div className="card-inner">
                 <div className="card-front">
                   <img src={activity.image} alt={activity.title} />
                   <div className="overlay" />
-                  <div className="icon-wrapper">
+                  <div className="icon-wrapper ">
                     <activity.icon className="icon" />
                   </div>
                   <h3>{activity.title}</h3>
