@@ -33,7 +33,7 @@
 .header h2 {
   font-size: 3rem;
   font-weight: 800;
-  color: #064e3b;
+  color: #f1683a;
   margin-bottom: 1.5rem;
   position: relative;
 }
@@ -76,7 +76,7 @@
 
 
 /* Media Query for screens under 615px width */
-@media (max-width: 710px) {
+@media (max-width: 810px) {
   .grid {
     grid-template-columns: 1fr; /* Single column grid for smaller screens */
     gap: 1.5rem; /* Adjust the gap between cards */
