@@ -1,0 +1,107 @@
+/* Footer Base Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Ensures the footer stays at the bottom */
+}
+
+.footer-content {
+    font-size: 14px;
+}
+
+/* Navigation Links */
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer a {
+    color: #4caf50; /* Green color for links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Links */
+.footer-social {
+    margin: 10px 0;
+}
+
+/* Newsletter Section */
+.newsletter {
+    margin: 20px 0;
+}
+
+.newsletter h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.newsletter-form button {
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: #45a049;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.back-to-top:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-links a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+}
