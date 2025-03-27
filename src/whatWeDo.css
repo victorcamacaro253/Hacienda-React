@@ -1,6 +1,8 @@
 .section {
   
-  background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 50%, #ffffff 100%);
+  /*background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 50%, #ffffff 100%); */
+  background: linear-gradient(120deg, #f8af5b 0%,#eef1f1, #fddbbb 100%);
+width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;

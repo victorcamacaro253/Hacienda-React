@@ -1,6 +1,6 @@
 /* Testimonials.css */
 .testimonials-section {
-  padding: 6rem 0;
+  
   background: linear-gradient(135deg, #f9f9f9 0%, #e8f5e9 100%);
 }
 
@@ -18,7 +18,7 @@
 .section-title {
   font-size: 2.75rem;
   font-weight: 800;
-  color: #1a202c;
+  color: #f1683a;
   position: relative;
   display: inline-block;
 }
@@ -28,7 +28,7 @@
   position: absolute;
   width: 60px;
   height: 4px;
-  background: #38a169;
+  background: #f1683a;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);

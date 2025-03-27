@@ -1,6 +1,7 @@
 .blog-section {
     padding: 60px 0;
-    background-color: #f0f4f8; /* Light background for contrast */
+    background: linear-gradient(-300deg, #fddbbb  0%,#eef1f1, #f8af5b  100% );
+    width: 100%;
 }
 
 .container {
