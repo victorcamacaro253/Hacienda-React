@@ -1,5 +1,5 @@
 .section {
-  padding: 6rem 0;
+  
   background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 50%, #ffffff 100%);
   min-height: 100vh;
   display: flex;
@@ -20,7 +20,8 @@
 
 .subtitle {
   display: inline-block;
-  background: linear-gradient(120deg, #34d399 0%, #059669 100%);
+  background: linear-gradient(120deg, #f1683a 0%, #e63946 100%);
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
@@ -46,7 +47,8 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #34d399, #059669);
+  background: linear-gradient(120deg, #f07a52 0%, #ec7c3b 100%);
+
   border-radius: 2px;
 }
 
