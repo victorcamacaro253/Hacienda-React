@@ -1,7 +1,6 @@
 .blog-section {
     padding: 60px 0;
-    background: linear-gradient(-300deg, #fddbbb  0%,#eef1f1, #f8af5b  100% );
-    width: 100%;
+    background-color: #f0f4f8; /* Light background for contrast */
 }
 
 .container {
@@ -15,7 +14,7 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-    color: #e98449; /* Darker color for the title */
+    color: #2c3e50; /* Darker color for the title */
 }
 
 .section-title-blog ::after {

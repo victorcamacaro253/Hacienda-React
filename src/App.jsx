@@ -11,7 +11,6 @@ import TestimonialsSection from './components/Testimonials';
 import ImageCarousel from './components/ImageCarousel';
 import BreedsShowcase from './components/breedshowcase';
 import BreedsDetails from './breedDetails';
-import Footer from './components/Footer'; // Import the Footer component
 
 const App = () => {
   
@@ -24,7 +23,7 @@ const App = () => {
       {/* Define Routes for different pages */}
       <Routes>
         {/* Default route (Home page) */}
-        <Route path="/" element={<div>   <Carousel/> <WhatWeDo/> <BlogSection/>   <TestimonialsSection/> <ImageCarousel/> <BreedsShowcase/>  <Map/>  </div>} />
+        <Route path="/" element={<div>   <Carousel/> <BlogSection/>  <WhatWeDo/> <TestimonialsSection/> <ImageCarousel/> <BreedsShowcase/>  <Map/>  </div>} />
 
         {/* Route for HistoryPage */}
         <Route path="/history" element={<HistoryPage />} />
@@ -33,7 +32,6 @@ const App = () => {
 
 
       </Routes>
-      <Footer/>
     </Router>
   );
 }
