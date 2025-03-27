@@ -80,6 +80,52 @@ width: 100%;
 
 
 /* Media Query for screens under 615px width */
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem; /* Adjust the gap between cards */
+  }
+
+  .card.w {
+    height: 320px; /* Increased height for the card */
+    width: 100%; /* Full width cards */
+    margin: 0; /* Remove margin for a tighter layout */
+  }
+
+  /* Adjust the card's inner container for smaller screens */
+  .card-inner {
+    transition: none; /* Disable 3D flip animation */
+    height: 100%; /* Ensure card content takes full height */
+  }
+
+  /* Card front style */
+  .card-front img {
+    object-fit: cover; /* Ensure images cover the area */
+    height: 250px; /* Increased image height */
+  }
+
+  .card-front h3 {
+    font-size: 1.2rem; /* Smaller title text */
+  }
+
+  .card-back {
+    padding: 1.5rem; /* Adjust padding to make it fit better on small screens */
+    height: auto; /* Ensure the back content is flexible */
+  }
+
+  .card-back h3 {
+    font-size: 1.2rem; /* Adjust heading size */
+  }
+
+  .card-back p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  .learn-more {
+    font-size: 1rem; /* Adjust font size of the button */
+    padding: 0.5rem 1rem; /* Make the button smaller */
+  }
+}
 
 
 
