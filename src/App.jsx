@@ -11,6 +11,7 @@ import TestimonialsSection from './components/Testimonials';
 import ImageCarousel from './components/ImageCarousel';
 import BreedsShowcase from './components/breedshowcase';
 import BreedsDetails from './breedDetails';
+import Footer from './components/Footer'; // Import the Footer component
 
 const App = () => {
   
@@ -32,6 +33,7 @@ const App = () => {
 
 
       </Routes>
+      <Footer/>
     </Router>
   );
 }
