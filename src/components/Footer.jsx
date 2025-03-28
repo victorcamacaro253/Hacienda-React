@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Footer.css'; // Import the CSS file for styling
+import '../Footer.css';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -9,12 +9,10 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        {/* Back-to-Top Button */}
         <button className="back-to-top" onClick={scrollToTop} aria-label="Scroll to top">
           Back to Top
         </button>
 
-        {/* Navigation Links */}
         <nav className="footer-links">
           <a href="/">Home</a>
           <a href="/history">History</a>
@@ -23,7 +21,6 @@ const Footer = () => {
           <a href="/privacy-policy">Privacy Policy</a>
         </nav>
 
-        {/* Social Media Links */}
         <div className="footer-social">
           <span>Follow us on:</span>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"> Facebook </a> | 
@@ -31,17 +28,24 @@ const Footer = () => {
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"> Instagram </a>
         </div>
 
-        {/* Newsletter Section */}
         <div className="newsletter">
           <h4>Subscribe to our Newsletter</h4>
           <form className="newsletter-form">
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Subscribe</button>
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              required 
+              className="newsletter-input"
+            />
+            <button type="submit" className="newsletter-button">
+              Subscribe
+            </button>
           </form>
         </div>
 
-        {/* Copyright Information */}
-        <p>&copy; {new Date().getFullYear()} Your Company Name. All rights reserved.</p>
+        <p className="copyright">
+          &copy; {new Date().getFullYear()} Your Company Name. All rights reserved.
+        </p>
       </div>
     </footer>
   );
