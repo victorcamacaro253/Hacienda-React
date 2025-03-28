@@ -88,6 +88,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .footer{
+        width: 100%;
+    }
     .footer-links a {
         display: block;
         margin: 5px 0;
