@@ -67,12 +67,18 @@
 }
 
 @media (min-width: 500px) {
+  .section {
+    width: 100%;
+  }
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 640px) {
+  .section{
+    width: 100%;
+  }
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
