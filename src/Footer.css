@@ -1,147 +1,188 @@
-/* Global reset for footer and its children */
-.footer * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Footer Base Styles */
+.footer {
+  background: linear-gradient(135deg, #2c3e50, #4a6491);
+  color: #fff;
+  padding: 40px 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Footer Sections */
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 50px;
+  height: 2px;
+  background: #4caf50;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  padding-right: 20px;
+}
+
+.newsletter-description {
+  margin-bottom: 15px;
+  color: #ecf0f1;
+  font-size: 0.9rem;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter-input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+}
+
+.newsletter-button {
+  padding: 12px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #3d8b40;
+  transform: translateY(-2px);
+}
+
+.paw-icon {
+  font-size: 0.9rem;
+}
+
+/* Links Section */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #4caf50;
+  transform: translateX(5px);
+}
+
+/* Social Section */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #ecf0f1;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #4caf50;
+  transform: scale(1.2);
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+.back-to-top:hover {
+  background-color: #3d8b40;
+  transform: translateY(-5px);
+}
+
+.arrow-icon {
+  font-size: 1.2rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #bdc3c7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   
-  /* Footer Base Styles */
-  .footer {
-    width: 100%;
-    max-width: 100vw;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 10px;
-    margin-top: auto;
-    overflow-x: hidden;
-    position: relative;
+  .newsletter-section {
+    padding-right: 0;
   }
   
-  .footer-content {
-    font-size: 14px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    width: 100%;
-  }
-  
-  /* Navigation Links */
-  .footer-links {
-    margin: 15px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 20px;
-  }
-  
-  .footer-links a {
-    color: #4caf50;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Social Media Links */
-  .footer-social {
-    margin: 15px 0;
-  }
-  
-  .footer-social span {
-    margin-right: 5px;
-  }
-  
-  /* Newsletter Section */
-  .newsletter {
-    margin: 20px auto;
-    max-width: 500px;
-  }
-  
-  .newsletter h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .newsletter-form {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .newsletter-input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    flex-grow: 1;
-    max-width: 300px;
-  }
-  
-  .newsletter-button {
-    padding: 8px 15px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  
-  .newsletter-button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Back-to-Top Button */
   .back-to-top {
-    margin: 15px auto;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
   }
-  
-  .back-to-top:hover {
-    background-color: #45a049;
-  }
-  
-  /* Copyright */
-  .copyright {
-    margin-top: 20px;
-    font-size: 13px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .footer {
-      padding: 20px 10px;
-    }
-  
-    .footer-links {
-      flex-direction: column;
-      gap: 8px;
-    }
-  
-    .footer-social {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-  
-    .newsletter-form {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .newsletter-input {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
+}
